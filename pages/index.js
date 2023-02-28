@@ -111,7 +111,7 @@ export default function Home() {
                 </p>
                 <h4 className='py-4 text-teal-600'>Software Engineer Intern</h4>
                 <ul className='list-disc text-left px-4'>
-                  <li className='text-gray-800 py-1 dark:text-gray-400'>Improved the Public API's property management system by creating a class that handled retrieving properties from local YAML files and an Amazon DynamoDB instance</li>
+                  <li className='text-gray-800 py-1 dark:text-gray-400'>Improved the Public APIs property management system by creating a class that handled retrieving properties from local YAML files and an Amazon DynamoDB instance</li>
                   <li className='text-gray-800 py-1 dark:text-gray-400'>Explored new ways to automate version bumping using Jenkins and Grunt when making commits to a projects master branch </li>
                   <li className='text-gray-800 py-1 dark:text-gray-400'>Developed my skills in a DevOps work environment by working on tickets and automating tasks such as building, testing, and deploying software</li>
                   <li className='text-gray-800 py-1 dark:text-gray-400'>Developed additions to software that had a codebase of over half a million lines of code </li>
