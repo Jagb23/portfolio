@@ -1,21 +1,23 @@
 import Head from 'next/head'
-import {BsFillMoonStarsFill, BsSun} from 'react-icons/bs'
+import {BsFillMoonStarsFill} from 'react-icons/bs'
 import {FaSun} from 'react-icons/fa'
 import {AiFillLinkedin, AiFillGithub} from 'react-icons/ai'
 import Image from 'next/image'
 import earth from '../public/earth3.png'
 import tools from '../public/tools.png'
-import code from '../public/earth2.jpg'
+import genesys from '../public/genesys-logo.png'
 import {useState} from 'react';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
   let darkModeIcon;
+
   if (darkMode) {
     darkModeIcon = <FaSun onClick={() => setDarkMode(!darkMode)} className='cursor-pointer text-2xl' color='white'/>
   } else {
     darkModeIcon = <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className='cursor-pointer text-2xl'/>
   }
+
   return (
     <div className={darkMode ? "dark" : ""}>
       <div className='bg-white dark:bg-gray-900'>
@@ -84,41 +86,58 @@ export default function Home() {
             </div>
 
             {/* Cards */}
-            <div className='lg:flex gap-10 mx-auto'>
-              <div className='text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-800'>
-                <Image src={tools} width={100} height={100} className='inline'/>
-                <h3 className='text-lg font-medium pb-2 dark:text-white'>Tools</h3>
+            <div className='grid grid-cols-2 gap-x-10 gap-y-0 '>
+
+              <div className='col-span-2 text-center shadow-xl p-10 rounded-xl my-10 dark:bg-gray-800'>
+                <Image src={genesys} width={150} height={150} className='inline'/>
+                <h3 className='text-lg font-medium pb-2 dark:text-white'>Genesys</h3>
                 <p className='pb-2 dark:text-white'>
-                  Tools I am proficient with.
+                 2020-Present 
                 </p>
-                <h4 className='py-4 text-teal-600'>Development tools I use</h4>
-                <p className='text-gray-800 py-1 dark:text-gray-400'>Docker</p>
-                <p className='text-gray-800 py-1 dark:text-gray-400'>Jenkins</p>
-                <p className='text-gray-800 py-1 dark:text-gray-400'>Vim</p>
+                <h4 className='py-4 text-teal-600'>Software Engineer</h4>
+                <ul className='list-disc text-left px-4'>
+                  <li className='text-gray-800 py-1 dark:text-gray-400'>something about being on call</li>
+                  <li className='text-gray-800 py-1 dark:text-gray-400'>something about working on the out limits clients (caching, maintaining) </li>
+                  <li className='text-gray-800 py-1 dark:text-gray-400'>Primary reviewer on pull requests </li>
+                  <li className='text-gray-800 py-1 dark:text-gray-400'>migrated old apis to our public api platform</li>
+                </ul>
               </div>
 
-              <div className='text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-800'>
-                <Image src={tools} width={100} height={100} className='inline'/>
-                <h3 className='text-lg font-medium pb-2 dark:text-white'>Tools</h3>
+              <div className='col-span-2  text-center shadow-xl p-10 rounded-xl my-10 dark:bg-gray-800'>
+                <Image src={genesys} width={150} height={150} className='inline'/>
+                <h3 className='text-lg font-medium pb-2 dark:text-white'>Genesys (Internship)</h3>
                 <p className='pb-2 dark:text-white'>
-                  Tools I am proficient with.
+                 2019-2020 
                 </p>
-                <h4 className='py-4 text-teal-600'>Development tools I use</h4>
-                <p className='text-gray-800 py-1 dark:text-gray-400'>Docker</p>
-                <p className='text-gray-800 py-1 dark:text-gray-400'>Jenkins</p>
-                <p className='text-gray-800 py-1 dark:text-gray-400'>Vim</p>
+                <h4 className='py-4 text-teal-600'>Software Engineer Intern</h4>
+                <ul className='list-disc text-left px-4'>
+                  <li className='text-gray-800 py-1 dark:text-gray-400'>Improved the Public API's property management system by creating a class that handled retrieving properties from local YAML files and an Amazon DynamoDB instance</li>
+                  <li className='text-gray-800 py-1 dark:text-gray-400'>Explored new ways to automate version bumping using Jenkins and Grunt when making commits to a projects master branch </li>
+                  <li className='text-gray-800 py-1 dark:text-gray-400'>Developed my skills in a DevOps work environment by working on tickets and automating tasks such as building, testing, and deploying software</li>
+                  <li className='text-gray-800 py-1 dark:text-gray-400'>Developed additions to software that had a codebase of over half a million lines of code </li>
+                  <li className='text-gray-800 py-1 dark:text-gray-400'>Utilized many tools such as Maven, Git, IntelliJ IDEA, and Jenkins to simplify and reduce the amount of time taken during the development process </li>
+                  <li className='text-gray-800 py-1 dark:text-gray-400'>Established CheckStyle rules for the Public API repository to enforce specific coding standards to improve maintainability </li>
+                </ul>
               </div>
 
-              <div className='text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-800'>
+              <div className='col-span-2 md:col-span-1 grow text-center shadow-xl p-10 rounded-xl my-10 dark:bg-gray-800'>
                 <Image src={tools} width={100} height={100} className='inline'/>
                 <h3 className='text-lg font-medium pb-2 dark:text-white'>Tools</h3>
                 <p className='pb-2 dark:text-white'>
                   Tools I am proficient with.
                 </p>
                 <h4 className='py-4 text-teal-600'>Development tools I use</h4>
-                <p className='text-gray-800 py-1 dark:text-gray-400'>Docker</p>
+                <p className='text-gray-800 py-1 dark:text-gray-400'>Git</p>
                 <p className='text-gray-800 py-1 dark:text-gray-400'>Jenkins</p>
-                <p className='text-gray-800 py-1 dark:text-gray-400'>Vim</p>
+                <p className='text-gray-800 py-1 dark:text-gray-400'>Maven</p>
+              </div>
+
+              <div className='col-span-2 md:col-span-1 grow text-center shadow-xl p-10 rounded-xl my-10 dark:bg-gray-800'>
+                <Image src={tools} width={100} height={100} className='inline'/>
+                <h3 className='text-lg font-medium pb-2 dark:text-white'>Programming Languages</h3>
+                <h4 className='py-4 text-teal-600'>Programming languages I use</h4>
+                <p className='text-gray-800 py-1 dark:text-gray-400'>Java</p>
+                <p className='text-gray-800 py-1 dark:text-gray-400'>Python</p>
               </div>
 
             </div> 
